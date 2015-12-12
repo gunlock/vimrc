@@ -26,6 +26,11 @@ fun! SetupVAM()
 endfun
 call SetupVAM()
 
+" VAM addons
+VAMActivate Auto_Pairs
+
+
+
 " use indentation of previous line
 set autoindent
 " use intelligent indentation for C
