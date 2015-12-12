@@ -9,7 +9,7 @@ fun! SetupVAM()
   let g:vim_addon_manager = c
   "for windows 
   if has("win32") || has("win64") 
-    let s:c.plugin_root_dir = expand('$HOME', 1) . '\.vim\vim-addons'
+    let c.plugin_root_dir = expand('$HOME', 1) . '\.vim\vim-addons'
     let &rtp.=(empty(&rtp)?'':',').c.plugin_root_dir.'\vim-addon-manager'
     if !isdirectory(c.plugin_root_dir.'\vim-addon-manager\autoload')
       execute '!git clone --depth=1 git://github.com/MarcWeber/vim-addon-manager '
@@ -17,7 +17,7 @@ fun! SetupVAM()
     endif
   "for unix 
   else 
-    let s:c.plugin_root_dir = expand('$HOME', 1) . '/.vim/vim-addons'
+    let c.plugin_root_dir = expand('$HOME', 1) . '/.vim/vim-addons'
     " Force your ~/.vim/after directory to be last in &rtp always:
     " let g:vim_addon_manager.rtp_list_hook = 'vam#ForceUsersAfterDirectoriesToBeLast'
 
