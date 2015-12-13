@@ -3,10 +3,19 @@ set enc=utf-8
 set fenc=utf-8
 set termencoding=utf-8
 
+" Patch for VAM git check out functions when behind proxy/firewall and git protocol is blocked
+" and https is required
+fun! MyGitCheckout(repository, targetDir)
+  let a:repository.url = substitute(a:repository.url, '^git://github', 'https://github', '')
+  return vam#utils#RunShell('git clone --depth=1 $.url $p', a:repository, a:targetDir)
+endfun
+
 " Set up VAM - VIM Addon Manager
 fun! SetupVAM()
+  let g:vim_addon_manager = {'scms': {'git': {}}}
   let c = get(g:, 'vim_addon_manager', {})
-  let g:vim_addon_manager = c
+  " Apply MyGetCheckout patch (see above)
+  let g:vim_addon_manager.scms.git.clone=['MyGitCheckout']
   let c.plugin_root_dir = expand('$HOME', 1) . '/.vim/vim-addons'
   " Force your ~/.vim/after directory to be last in &rtp always:
   " let g:vim_addon_manager.rtp_list_hook = 'vam#ForceUsersAfterDirectoriesToBeLast'
