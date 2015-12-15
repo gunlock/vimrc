@@ -76,6 +76,8 @@ let g:DoxygenToolkit_authorName="John Doe <john@doe.com>"
 
 " Enhanced keyboard mappings
 "
+" shortcut for <esc>
+:inoremap jk <esc>
 " in normal mode F2 will save the file
 nmap <F2> :w<CR>
 " in insert mode F2 will exit insert, save, enters insert again
