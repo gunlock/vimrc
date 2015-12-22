@@ -36,7 +36,7 @@ endfun
 call SetupVAM()
 
 " VAM addons
-VAMActivate Auto_Pairs indentLine snipmate YouCompleteMe
+VAMActivate Auto_Pairs indentLine UltiSnips YouCompleteMe
 
 
 
