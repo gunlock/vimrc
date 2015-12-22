@@ -36,7 +36,7 @@ endfun
 call SetupVAM()
 
 " VAM addons
-VAMActivate Auto_Pairs indentLine
+VAMActivate Auto_Pairs indentLine snipmate YouCompleteMe
 
 
 
@@ -74,3 +74,6 @@ let mapleader = "\<Space>"
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '.'
 let g:indentLine_char = '.'
+
+" SnipMate
+
