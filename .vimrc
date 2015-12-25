@@ -67,6 +67,10 @@ set backspace=2 " make backspace work like most other apps
 " shortcut for <esc>
 :inoremap jk <esc>
 
+" <C-o> is used to issue Normal mode command without exiting insert mode
+inoremap <C-e> <C-o>A
+inoremap <C-a> <C-o>I
+
 " Remap leader key
 let mapleader = "\<Space>"
 
