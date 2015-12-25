@@ -39,7 +39,6 @@ call SetupVAM()
 VAMActivate Auto_Pairs indentLine UltiSnips YouCompleteMe
 
 
-
 " use indentation of previous line
 set autoindent
 " use intelligent indentation for C
@@ -79,5 +78,4 @@ let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '.'
 let g:indentLine_char = '.'
 
-" SnipMate
 
