@@ -36,7 +36,7 @@ endfun
 call SetupVAM()
 
 " VAM addons
-VAMActivate Auto_Pairs indentLine UltiSnips YouCompleteMe
+VAMActivate Auto_Pairs indentLine UltiSnips YouCompleteMe Supertab
 
 
 " use indentation of previous line
@@ -70,6 +70,8 @@ set backspace=2 " make backspace work like most other apps
 inoremap <C-e> <C-o>A
 inoremap <C-a> <C-o>I
 
+inoremap <C-l> <esc>f"a
+
 " Remap leader key
 let mapleader = "\<Space>"
 
@@ -78,4 +80,16 @@ let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '.'
 let g:indentLine_char = '.'
 
+" YCM
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+filetype on
 
+" Make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
