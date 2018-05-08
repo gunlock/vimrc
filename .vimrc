@@ -1,7 +1,5 @@
 
 set enc=utf-8
-set fenc=utf-8
-set termencoding=utf-8
 
 " Patch for VAM git check out functions when behind proxy/firewall and git protocol is blocked
 " and https is required
@@ -36,7 +34,10 @@ endfun
 call SetupVAM()
 
 " VAM addons
-VAMActivate Auto_Pairs indentLine UltiSnips YouCompleteMe Supertab
+VAMActivate YouCompleteMe github:vim-airline/vim-airline-themes github:vim-airline/vim-airline
+VAMActivate github:tomasiser/vim-code-dark
+
+" Auto_Pairs indentLine UltiSnips YouCompleteMe Supertab
 
 
 " use indentation of previous line
@@ -52,7 +53,7 @@ set textwidth=120
 " turn syntax highlighting on
 set t_Co=256
 syntax on
-" colorscheme wombat256
+colorscheme codedark
 " turn line numbers on
 set number
 " highlight matching braces
@@ -93,3 +94,5 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+let g:airline_theme='codedark'
