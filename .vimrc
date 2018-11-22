@@ -36,6 +36,7 @@ call SetupVAM()
 " VAM addons
 VAMActivate YouCompleteMe github:vim-airline/vim-airline-themes github:vim-airline/vim-airline
 VAMActivate github:tomasiser/vim-code-dark
+VAMActivate nginx
 
 " Auto_Pairs indentLine UltiSnips YouCompleteMe Supertab
 
