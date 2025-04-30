@@ -64,6 +64,8 @@ set showmatch
 set comments=sl:/*,mb:\ *,elx:\ */
 set backspace=2 " make backspace work like most other apps
 
+set relativenumber
+
 " Enhanced keyboard mappings
 "
 " shortcut for <esc>
